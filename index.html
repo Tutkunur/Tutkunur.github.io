@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tutku Nur Kurtuluş | Senior Product Designer</title>
+<title>Tutkun Ur | Sr. Product Designer</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
-    --bg:#050505;
-    --card:#0f0f10;
-    --border:rgba(255,255,255,.08);
-    --text:#ffffff;
-    --secondary:#a1a1aa;
-    --accent:#8b5cf6;
-}
 
 *{
     margin:0;
@@ -31,433 +22,266 @@ html{
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 24px;
-}
-
-/* NAV */
-
-nav{
-    position:sticky;
-    top:0;
-    backdrop-filter:blur(20px);
-    background:rgba(5,5,5,.7);
-    border-bottom:1px solid var(--border);
-    z-index:100;
-}
-
-.nav-inner{
-    height:72px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-weight:700;
-    letter-spacing:-0.5px;
-}
-
-.nav-links{
-    display:flex;
-    gap:24px;
-}
-
-.nav-links a{
-    color:var(--secondary);
-    text-decoration:none;
-    transition:.3s;
-}
-
-.nav-links a:hover{
+    background:#0a0a0a;
     color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
 }
-
-/* HERO */
 
 .hero{
-    padding:120px 0 100px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 24px;
+}
+
+.hero-content{
+    max-width:900px;
 }
 
 .hero h1{
     font-size:72px;
+    font-weight:800;
     line-height:1;
-    letter-spacing:-3px;
-    max-width:900px;
+    margin-bottom:24px;
 }
 
 .hero h2{
-    margin-top:20px;
-    color:var(--secondary);
+    font-size:24px;
+    color:#9ca3af;
     font-weight:500;
-    font-size:28px;
+    margin-bottom:32px;
 }
 
 .hero p{
-    margin-top:32px;
-    max-width:760px;
-    color:var(--secondary);
-    font-size:20px;
+    color:#d1d5db;
+    font-size:18px;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
 }
 
-.hero-tags{
+.tags{
     margin-top:40px;
     display:flex;
     flex-wrap:wrap;
     gap:12px;
+    justify-content:center;
 }
 
 .tag{
-    padding:12px 18px;
-    border:1px solid var(--border);
+    border:1px solid rgba(255,255,255,.15);
+    padding:12px 20px;
     border-radius:999px;
-    background:var(--card);
+    color:#d1d5db;
 }
 
-.hero-links{
+.links{
     margin-top:40px;
     display:flex;
-    gap:16px;
-}
-
-.hero-links a{
-    text-decoration:none;
-    color:white;
-    padding:14px 22px;
-    border-radius:12px;
-    background:var(--card);
-    border:1px solid var(--border);
-    transition:.3s;
-}
-
-.hero-links a:hover{
-    transform:translateY(-2px);
-}
-
-/* SECTION */
-
-.section-title{
-    font-size:48px;
-    margin-bottom:50px;
-    letter-spacing:-1px;
-}
-
-/* PROJECTS */
-
-.projects{
-    padding:40px 0 120px;
-}
-
-.project{
-    display:block;
-    text-decoration:none;
-    color:white;
-    margin-bottom:80px;
-}
-
-.project-image{
-    overflow:hidden;
-    border-radius:28px;
-    border:1px solid var(--border);
-    background:var(--card);
-}
-
-.project-image img{
-    width:100%;
-    display:block;
-    transition:.6s;
-}
-
-.project:hover img{
-    transform:scale(1.02);
-}
-
-.project-info{
-    margin-top:24px;
-}
-
-.project-number{
-    color:var(--accent);
-    font-size:14px;
-    margin-bottom:10px;
-}
-
-.project-info h3{
-    font-size:40px;
-    letter-spacing:-1px;
-}
-
-.project-info p{
-    color:var(--secondary);
-    max-width:700px;
-    margin-top:10px;
-}
-
-/* ABOUT */
-
-.about{
-    padding:80px 0;
-    border-top:1px solid var(--border);
-}
-
-.about p{
-    margin-top:20px;
-    max-width:850px;
-    color:var(--secondary);
-    font-size:20px;
-}
-
-/* FOOTER */
-
-footer{
-    padding:100px 0;
-    border-top:1px solid var(--border);
-}
-
-footer h2{
-    font-size:48px;
-    margin-bottom:20px;
-}
-
-footer p{
-    color:var(--secondary);
-    margin-bottom:24px;
-}
-
-.footer-links{
-    display:flex;
+    justify-content:center;
     gap:16px;
     flex-wrap:wrap;
 }
 
-.footer-links a{
+.links a{
     color:white;
     text-decoration:none;
+    padding:14px 24px;
+    border-radius:12px;
+    background:#171717;
+    transition:.3s;
 }
 
-/* ANIMATION */
-
-.fade{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
-}
-
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero{
-    padding:80px 0;
-}
-
-.hero h1{
-    font-size:48px;
-}
-
-.hero h2{
-    font-size:22px;
+.links a:hover{
+    background:#262626;
 }
 
 .section-title{
-    font-size:36px;
+    text-align:center;
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:20px;
 }
 
-.project-info h3{
+.section-subtitle{
+    text-align:center;
+    color:#9ca3af;
+    margin-bottom:80px;
+}
+
+.project{
+    width:100%;
+    margin-bottom:120px;
+}
+
+.project img{
+    width:100%;
+    display:block;
+}
+
+footer{
+    padding:100px 24px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h3{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+footer p{
+    color:#9ca3af;
+    margin-bottom:30px;
+}
+
+.email{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero h2{
+    font-size:18px;
+}
+
+.section-title{
     font-size:28px;
-}
-
-.hero-links{
-    flex-direction:column;
-}
-
-.nav-links{
-    display:none;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
-<nav>
-<div class="container nav-inner">
-<div class="logo">Tutku Nur Kurtuluş</div>
+<section class="hero">
 
-<div class="nav-links">
-<a href="#work">Work</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-</nav>
+    <div class="hero-content">
 
-<section class="hero container">
+        <h1>Tutkun Ur</h1>
 
-<h1>
-Designing meaningful digital experiences.
-</h1>
+        <h2>Senior Product Designer</h2>
 
-<h2>
-Senior Product Designer
-</h2>
+        <p>
+            Product designer focused on e-commerce, mobile experiences,
+            design systems, growth initiatives and AI-powered workflows.
+            Creating scalable experiences that balance business goals,
+            usability and visual excellence.
+        </p>
 
-<p>
-Product designer with 10+ years of experience across
-e-commerce, marketplace and digital products.
-Over the last 2 years, I have focused on UX/UI design,
-creating user-centered experiences that balance business goals
-with customer needs.
-</p>
+        <div class="tags">
+            <div class="tag">Product Design</div>
+            <div class="tag">UX Strategy</div>
+            <div class="tag">Design Systems</div>
+            <div class="tag">AI Workflows</div>
+            <div class="tag">Mobile & Web</div>
+            <div class="tag">Growth Design</div>
+        </div>
 
-<div class="hero-tags">
-<div class="tag">10+ Years Experience</div>
-<div class="tag">UX/UI Design</div>
-<div class="tag">Product Strategy</div>
-<div class="tag">E-Commerce</div>
-<div class="tag">Growth</div>
-</div>
+        <div class="links">
+            <a href="mailto:tutkunurk@gmail.com">Email</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Behance</a>
+        </div>
 
-<div class="hero-links">
-<a target="_blank" href="https://www.linkedin.com/in/tutku-nur-kurtulu%C5%9F-240688140/">LinkedIn</a>
-<a target="_blank" href="https://www.behance.net/tutkunurk">Behance</a>
-<a href="mailto:tutkunurk@gmail.com">Contact</a>
-</div>
+    </div>
 
 </section>
 
-<section id="work" class="projects container">
+<section>
 
-<h2 class="section-title">Featured Work</h2>
-
-<div class="project fade">
-<div class="project-image">
-<img src="coupon-experience-redesign-cover.jpg">
-</div>
-<div class="project-info">
-<div class="project-number">01</div>
-<h3>Coupon Experience Redesign</h3>
-<p>Improving coupon discovery, engagement and redemption.</p>
-</div>
-</div>
-
-<div class="project fade">
-<div class="project-image">
-<img src="account-center-redesign-cover.jpg">
-</div>
-<div class="project-info">
-<div class="project-number">02</div>
-<h3>Account Center Redesign</h3>
-<p>Restructuring the account experience through navigation and personalization.</p>
-</div>
-</div>
-
-<div class="project fade">
-<div class="project-image">
-<img src="ciceksepeti-thank-you-redesign-cover.jpg">
-</div>
-<div class="project-info">
-<div class="project-number">03</div>
-<h3>Thank You Experience Redesign</h3>
-<p>Transforming the post-purchase journey into a more engaging experience.</p>
-</div>
-</div>
-
-<div class="project fade">
-<div class="project-image">
-<img src="ciceksepeti-about-us-cover.jpg">
-</div>
-<div class="project-info">
-<div class="project-number">04</div>
-<h3>About Us Experience Redesign</h3>
-<p>Turning corporate content into a compelling brand storytelling experience.</p>
-</div>
-</div>
-
-<div class="project fade">
-<div class="project-image">
-<img src="ciceksepeti-video-card-cover.jpg">
-</div>
-<div class="project-info">
-<div class="project-number">05</div>
-<h3>Video Card Experience Redesign</h3>
-<p>Helping users understand and share personalized video messages.</p>
-</div>
-</div>
-
-<div class="project fade">
-<div class="project-image">
-<img src="b2b-customer-platform-cover.jpg">
-</div>
-<div class="project-info">
-<div class="project-number">06</div>
-<h3>B2B Customer Experience Redesign</h3>
-<p>Redesigning the corporate customer platform to increase trust and efficiency.</p>
-</div>
-</div>
+    <h2 class="section-title">Selected Case Studies</h2>
+    <p class="section-subtitle">
+        End-to-end product design projects across web and mobile platforms.
+    </p>
 
 </section>
 
-<section id="about" class="about container">
+<!-- COUPON -->
 
-<h2 class="section-title">About</h2>
-
-<p>
-I am a Senior Product Designer with over 10 years of experience in digital design.
-I started my career as a marketing designer and gradually transitioned into product design,
-focusing on user experience, interface design and digital strategy.
-Today, I design scalable products that connect business goals with user needs.
-</p>
-
+<section class="project">
+    <img src="coupon-experience-redesign-cover.jpg" alt="">
 </section>
 
-<footer id="contact">
+<section class="project">
+    <img src="ciceksepeti-kupon.jpg" alt="">
+</section>
 
-<div class="container">
+<!-- ACCOUNT -->
 
-<h2>Let's build meaningful products together.</h2>
+<section class="project">
+    <img src="account-center-redesign-cover.jpg" alt="">
+</section>
 
-<p>tutkunurk@gmail.com</p>
+<section class="project">
+    <img src="ciceksepeti-hesabim.jpg" alt="">
+</section>
 
-<div class="footer-links">
-<a target="_blank" href="https://www.linkedin.com/in/tutku-nur-kurtulu%C5%9F-240688140/">LinkedIn</a>
-<a target="_blank" href="https://www.behance.net/tutkunurk">Behance</a>
-<a href="mailto:tutkunurk@gmail.com">Email</a>
-</div>
+<!-- THANK YOU -->
 
-</div>
+<section class="project">
+    <img src="ciceksepeti-thank-you-redesign-cover.jpg" alt="">
+</section>
+
+<section class="project">
+    <img src="ciceksepeti-tesekkurler.jpg" alt="">
+</section>
+
+<!-- VIDEO CARD -->
+
+<section class="project">
+    <img src="ciceksepeti-video-card-cover.jpg" alt="">
+</section>
+
+<section class="project">
+    <img src="ciceksepeti-video-kart.jpg" alt="">
+</section>
+
+<!-- ABOUT US -->
+
+<section class="project">
+    <img src="ciceksepeti-about-us-cover.jpg" alt="">
+</section>
+
+<section class="project">
+    <img src="ciceksepeti-hakkimizda.jpg" alt="">
+</section>
+
+<!-- B2B -->
+
+<section class="project">
+    <img src="b2b-customer-platform-cover.jpg" alt="">
+</section>
+
+<section class="project">
+    <img src="nota-cicek-b2b.jpg" alt="">
+</section>
+
+<footer>
+
+    <h3>Let's Build Better Products</h3>
+
+    <p>
+        Available for Senior Product Design, Lead Product Design
+        and Product Strategy opportunities.
+    </p>
+
+    <a class="email" href="mailto:tutkunurk@gmail.com">
+        tutkunurk@gmail.com
+    </a>
 
 </footer>
-
-<script>
-
-const fades=document.querySelectorAll('.fade');
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-
-fades.forEach(el=>observer.observe(el));
-
-</script>
 
 </body>
 </html>
