@@ -1,68 +1,213 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutkunur | UX/UI Designer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutkunur | UX/UI Designer</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px;
-      line-height: 1.6;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#fff;
+  color:#111;
+}
 
-    h2 {
-      margin-top: 40px;
-    }
+.container{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+}
 
-    .project {
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin-top: 15px;
-      border-radius: 12px;
-    }
+.hero{
+  padding:120px 0 80px;
+}
 
-    a {
-      color: #0066ff;
-      text-decoration: none;
-    }
-  </style>
+.hero h1{
+  font-size:80px;
+  line-height:1;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:24px;
+  color:#666;
+  max-width:700px;
+}
+
+.section-title{
+  font-size:18px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:40px;
+  color:#888;
+}
+
+.projects{
+  padding:40px 0 100px;
+}
+
+.project{
+  margin-bottom:60px;
+}
+
+.project-image{
+  width:100%;
+  height:650px;
+  background:#f2f2f2;
+  border-radius:24px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.project-image:hover{
+  transform:scale(1.01);
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.project-info{
+  margin-top:20px;
+}
+
+.project-info h3{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.project-info p{
+  color:#666;
+  font-size:18px;
+}
+
+.about{
+  padding:100px 0;
+  border-top:1px solid #eee;
+}
+
+.about p{
+  max-width:900px;
+  font-size:24px;
+  line-height:1.7;
+}
+
+.contact{
+  padding:100px 0;
+  border-top:1px solid #eee;
+}
+
+.contact a{
+  color:#111;
+  font-size:24px;
+  text-decoration:none;
+}
+
+footer{
+  padding:40px 0;
+  color:#999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:48px;
+}
+
+.project-image{
+  height:300px;
+}
+
+.project-info h3{
+  font-size:28px;
+}
+
+.about p{
+  font-size:18px;
+}
+
+}
+</style>
 </head>
 
 <body>
 
+<div class="container">
+
+<section class="hero">
   <h1>Tutkunur</h1>
-  <p>UX/UI Designer</p>
-
-  <h2>Hakkımda</h2>
   <p>
-    Kullanıcı odaklı dijital ürünler tasarlayan UX/UI Designer.
+    UX/UI Designer creating intuitive digital experiences,
+    products and interfaces.
   </p>
+</section>
 
-  <h2>Projeler</h2>
+<section class="projects">
 
-  <div class="project">
-    <h3>Dashboard Redesign</h3>
-    <p>Kurumsal dashboard deneyiminin yeniden tasarlanması.</p>
-  </div>
+<div class="section-title">Selected Work</div>
 
-  <div class="project">
-    <h3>Mobile App Design</h3>
-    <p>Mobil uygulama kullanıcı deneyimi çalışması.</p>
-  </div>
+<div class="project">
 
-  <h2>İletişim</h2>
-  <p>
-    LinkedIn: Buraya LinkedIn linkini ekle
-  </p>
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600" alt="">
+</div>
+
+<div class="project-info">
+<h3>Dashboard Redesign</h3>
+<p>Enterprise analytics platform redesign.</p>
+</div>
+
+</div>
+
+<div class="project">
+
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1600" alt="">
+</div>
+
+<div class="project-info">
+<h3>Mobile Banking App</h3>
+<p>UX research and mobile experience design.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+<div class="section-title">About</div>
+
+<p>
+I design digital products that simplify complex workflows
+and create meaningful user experiences through research,
+strategy and interface design.
+</p>
+
+</section>
+
+<section class="contact">
+
+<div class="section-title">Contact</div>
+
+<p>
+<a href="https://linkedin.com">LinkedIn →</a>
+</p>
+
+</section>
+
+<footer>
+© 2025 Tutkunur
+</footer>
+
+</div>
 
 </body>
 </html>
