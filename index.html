@@ -1,210 +1,330 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tutkunur | Sr. Product Designer</title>
+
+<title>Tutkunur | Senior Product Designer</title>
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:#fff;
-  color:#111;
+background:#09090B;
+color:#fff;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+overflow-x:hidden;
 }
 
 .container{
-  width:90%;
-  max-width:1400px;
-  margin:auto;
+max-width:1200px;
+margin:auto;
+padding:0 32px;
+}
+
+.blur{
+position:fixed;
+width:500px;
+height:500px;
+background:rgba(99,102,241,.12);
+filter:blur(120px);
+top:-150px;
+right:-100px;
+pointer-events:none;
+z-index:-1;
 }
 
 .hero{
-  padding:120px 0 80px;
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+padding:10px 16px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:999px;
+background:rgba(255,255,255,.03);
+color:#A1A1AA;
+font-size:14px;
+margin-bottom:24px;
 }
 
 .hero h1{
-  font-size:80px;
-  line-height:1;
-  margin-bottom:20px;
+font-size:92px;
+line-height:0.95;
+letter-spacing:-4px;
+margin-bottom:24px;
+}
+
+.gradient{
+background:linear-gradient(
+90deg,
+#ffffff,
+#9ca3af
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-  font-size:24px;
-  color:#666;
-  max-width:700px;
+font-size:24px;
+line-height:1.7;
+max-width:700px;
+color:#A1A1AA;
+margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 24px;
+border-radius:14px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:white;
+color:black;
+}
+
+.primary:hover{
+transform:translateY(-2px);
+}
+
+.secondary{
+border:1px solid #27272A;
+color:white;
+}
+
+.secondary:hover{
+background:#18181B;
+}
+
+.section{
+padding:120px 0;
 }
 
 .section-title{
-  font-size:18px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:40px;
-  color:#888;
-}
-
-.projects{
-  padding:40px 0 100px;
+font-size:14px;
+text-transform:uppercase;
+letter-spacing:2px;
+color:#71717A;
+margin-bottom:40px;
 }
 
 .project{
-  margin-bottom:60px;
+margin-bottom:80px;
 }
 
-.project-image{
-  width:100%;
-  height:650px;
-  background:#f2f2f2;
-  border-radius:24px;
-  overflow:hidden;
-  transition:.3s;
+.project-cover{
+height:500px;
+border-radius:28px;
+background:linear-gradient(
+135deg,
+#18181B,
+#111827
+);
+border:1px solid #27272A;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#52525B;
+transition:.3s;
 }
 
-.project-image:hover{
-  transform:scale(1.01);
+.project-cover:hover{
+transform:translateY(-6px);
+border-color:#3F3F46;
 }
 
-.project-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.project h3{
+font-size:36px;
+margin-top:24px;
+margin-bottom:12px;
 }
 
-.project-info{
-  margin-top:20px;
-}
-
-.project-info h3{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.project-info p{
-  color:#666;
-  font-size:18px;
+.project p{
+font-size:18px;
+color:#A1A1AA;
 }
 
 .about{
-  padding:100px 0;
-  border-top:1px solid #eee;
+max-width:850px;
 }
 
 .about p{
-  max-width:900px;
-  font-size:24px;
-  line-height:1.7;
+font-size:28px;
+line-height:1.8;
+color:#D4D4D8;
 }
 
-.contact{
-  padding:100px 0;
-  border-top:1px solid #eee;
+.footer{
+padding:60px 0;
+border-top:1px solid #27272A;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
 }
 
-.contact a{
-  color:#111;
-  font-size:24px;
-  text-decoration:none;
+.footer a{
+color:#A1A1AA;
+text-decoration:none;
 }
 
-footer{
-  padding:40px 0;
-  color:#999;
+.footer a:hover{
+color:white;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-  font-size:48px;
+font-size:54px;
+letter-spacing:-2px;
 }
 
-.project-image{
-  height:300px;
+.hero p{
+font-size:18px;
 }
 
-.project-info h3{
-  font-size:28px;
+.project-cover{
+height:260px;
 }
 
 .about p{
-  font-size:18px;
+font-size:20px;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<div class="blur"></div>
+
 <div class="container">
 
 <section class="hero">
-  <h1>Tutkunur</h1>
-  <p>
-    UX/UI Designer creating intuitive digital experiences,
-    products and interfaces.
-  </p>
+
+<div>
+
+<div class="badge">
+Senior Product Designer
+</div>
+
+<h1>
+Designing<br>
+<span class="gradient">Digital Products</span>
+</h1>
+
+<p>
+Creating intuitive user experiences, scalable design systems,
+and impactful digital products for modern businesses.
+</p>
+
+<div class="buttons">
+
+<a href="#work" class="btn primary">
+View Work
+</a>
+
+<a href="https://linkedin.com/in/YOUR-LINKEDIN" class="btn secondary">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="projects">
+<section id="work" class="section">
 
-<div class="section-title">Selected Work</div>
+<div class="section-title">
+Selected Work
+</div>
 
 <div class="project">
 
-<div class="project-image">
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600" alt="">
+<div class="project-cover">
+Project Cover
 </div>
 
-<div class="project-info">
-<h3>Dashboard Redesign</h3>
-<p>Enterprise analytics platform redesign.</p>
-</div>
+<h3>
+Enterprise Dashboard
+</h3>
+
+<p>
+Redesigning a complex SaaS analytics platform and improving usability.
+</p>
 
 </div>
 
 <div class="project">
 
-<div class="project-image">
-<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1600" alt="">
+<div class="project-cover">
+Project Cover
 </div>
 
-<div class="project-info">
-<h3>Mobile Banking App</h3>
-<p>UX research and mobile experience design.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="about">
-<div class="section-title">About</div>
+<h3>
+Mobile Banking Experience
+</h3>
 
 <p>
-I design digital products that simplify complex workflows
-and create meaningful user experiences through research,
-strategy and interface design.
+Improving engagement, accessibility and customer experience.
 </p>
+
+</div>
 
 </section>
 
-<section class="contact">
+<section class="section">
 
-<div class="section-title">Contact</div>
+<div class="section-title">
+About
+</div>
+
+<div class="about">
 
 <p>
-<a href="https://linkedin.com">LinkedIn →</a>
+I'm a Senior Product Designer focused on simplifying complex workflows,
+building scalable design systems, and creating products people genuinely enjoy using.
 </p>
+
+</div>
 
 </section>
 
-<footer>
+<footer class="footer">
+
+<div>
 © 2025 Tutkunur
+</div>
+
+<div>
+<a href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+</div>
+
 </footer>
 
 </div>
