@@ -24,7 +24,7 @@ scroll-behavior:smooth;
 body{
 font-family:'Inter',sans-serif;
 background:#050505;
-color:white;
+color:#fff;
 overflow-x:hidden;
 }
 
@@ -40,6 +40,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:80px 0;
 }
 
 .hero-content{
@@ -47,7 +48,7 @@ max-width:900px;
 }
 
 .hero h1{
-font-size:clamp(60px,10vw,120px);
+font-size:clamp(64px,10vw,120px);
 font-weight:800;
 letter-spacing:-4px;
 line-height:.95;
@@ -55,7 +56,7 @@ line-height:.95;
 
 .hero h2{
 margin-top:24px;
-font-size:clamp(20px,3vw,36px);
+font-size:clamp(20px,3vw,34px);
 font-weight:500;
 color:#9ca3af;
 }
@@ -87,6 +88,7 @@ transition:.3s;
 
 .links a:hover{
 transform:translateY(-4px);
+border-color:rgba(255,255,255,.25);
 }
 
 .section{
@@ -112,20 +114,28 @@ border-radius:28px;
 overflow:hidden;
 margin-bottom:32px;
 cursor:pointer;
-transition:.3s;
+transition:.35s;
+position:relative;
 }
 
 .project:hover{
 transform:translateY(-8px);
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+border-color:rgba(255,255,255,.18);
 }
 
 .project img{
 width:100%;
 display:block;
+transition:.5s;
+}
+
+.project:hover img{
+transform:scale(1.02);
 }
 
 .project-info{
-padding:24px;
+padding:28px;
 }
 
 .project-info h3{
@@ -137,37 +147,62 @@ margin-bottom:8px;
 color:#9ca3af;
 }
 
-.case-study{
+.modal{
+position:fixed;
+inset:0;
 display:none;
-margin-bottom:60px;
-background:#0a0a0a;
-border:1px solid rgba(255,255,255,.08);
-border-radius:24px;
-padding:24px;
+align-items:center;
+justify-content:center;
+z-index:9999;
 }
 
-.case-study.active{
-display:block;
-}
-
-.case-study-meta{
+.modal.active{
 display:flex;
-gap:24px;
-flex-wrap:wrap;
-margin-bottom:24px;
-color:#9ca3af;
 }
 
-.case-study img{
+.modal-backdrop{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(20px);
+}
+
+.modal-content{
+position:relative;
+width:min(1400px,92vw);
+max-height:92vh;
+overflow:auto;
+z-index:2;
+border-radius:24px;
+}
+
+.modal-content img{
 width:100%;
 display:block;
-border-radius:16px;
+border-radius:24px;
+}
+
+.close-btn{
+position:fixed;
+top:24px;
+right:24px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+color:white;
+font-size:22px;
+cursor:pointer;
+z-index:10000;
 }
 
 footer{
 padding:120px 0;
 text-align:center;
 border-top:1px solid rgba(255,255,255,.08);
+margin-top:80px;
 }
 
 footer h3{
@@ -191,6 +226,10 @@ text-decoration:none;
 padding:0 20px;
 }
 
+.hero p{
+font-size:17px;
+}
+
 .section-title{
 font-size:42px;
 }
@@ -203,7 +242,6 @@ font-size:22px;
 
 </style>
 </head>
-
 <body>
 
 <section class="hero">
@@ -244,133 +282,59 @@ and support sustainable business growth.
 <p class="section-subtitle">
 Product design, growth and platform experiences.
 </p>
-<!-- COUPON -->
 
-<div class="project" onclick="toggleCase('coupon')">
-
+<div class="project" onclick="openModal('ciceksepeti-kupon.jpg')">
 <img src="coupon-experience-redesign-cover.jpg">
-
 <div class="project-info">
 <h3>Coupon Experience Redesign</h3>
 <p>Mobile & Web Product Experience</p>
 </div>
-
 </div>
 
-<div id="coupon" class="case-study">
-
-<div class="case-study-meta">
-<span>Role: Sr. Product Designer</span>
-<span>Platform: Mobile & Web</span>
-<span>Year: 2024</span>
-</div>
-
-<img src="ciceksepeti-kupon.jpg">
-
-</div>
-
-<!-- ACCOUNT -->
-
-<div class="project" onclick="toggleCase('account')">
-
+<div class="project" onclick="openModal('ciceksepeti-hesabim.jpg')">
 <img src="account-center-redesign-cover.jpg">
-
 <div class="project-info">
 <h3>Account Center Redesign</h3>
 <p>Mobile Product Experience</p>
 </div>
-
 </div>
 
-<div id="account" class="case-study">
-
-<div class="case-study-meta">
-<span>Role: Sr. Product Designer</span>
-<span>Platform: Mobile</span>
-</div>
-
-<img src="ciceksepeti-hesabim.jpg">
-
-</div>
-
-<!-- THANK YOU -->
-
-<div class="project" onclick="toggleCase('thanks')">
-
+<div class="project" onclick="openModal('ciceksepeti-tesekkurler.jpg')">
 <img src="ciceksepeti-thank-you-redesign-cover.jpg">
-
 <div class="project-info">
 <h3>Thank You Experience</h3>
 <p>Order Completion Experience</p>
 </div>
-
 </div>
 
-<div id="thanks" class="case-study">
-
-<img src="ciceksepeti-tesekkurler.jpg">
-
-</div>
-
-<!-- VIDEO CARD -->
-
-<div class="project" onclick="toggleCase('video')">
-
+<div class="project" onclick="openModal('ciceksepeti-video-kart.jpg')">
 <img src="ciceksepeti-video-card-cover.jpg">
-
 <div class="project-info">
 <h3>Video Card Experience</h3>
 <p>Gift Messaging Experience</p>
 </div>
-
 </div>
 
-<div id="video" class="case-study">
-
-<img src="ciceksepeti-video-kart.jpg">
-
-</div>
-
-<!-- ABOUT US -->
-
-<div class="project" onclick="toggleCase('about')">
-
+<div class="project" onclick="openModal('ciceksepeti-hakkimizda.jpg')">
 <img src="ciceksepeti-about-us-cover.jpg">
-
 <div class="project-info">
 <h3>About Us Redesign</h3>
 <p>Corporate Experience</p>
 </div>
-
 </div>
 
-<div id="about" class="case-study">
-
-<img src="ciceksepeti-hakkimizda.jpg">
-
-</div>
-
-<!-- B2B -->
-
-<div class="project" onclick="toggleCase('b2b')">
-
+<div class="project" onclick="openModal('nota-cicek-b2b.jpg')">
 <img src="b2b-customer-platform-cover.jpg">
-
 <div class="project-info">
 <h3>B2B Customer Platform</h3>
 <p>Corporate Ordering Experience</p>
 </div>
-
-</div>
-
-<div id="b2b" class="case-study">
-
-<img src="nota-cicek-b2b.jpg">
-
 </div>
 
 </div>
+
 </section>
+
 <footer>
 
 <div class="container">
@@ -382,7 +346,7 @@ Available for Product Design, Marketing Design,
 Growth Design and UI/UX opportunities.
 </p>
 
-<p style="margin-top:20px;">
+<p>
 <a href="mailto:tutkunurk@gmail.com">
 tutkunurk@gmail.com
 </a>
@@ -392,27 +356,46 @@ tutkunurk@gmail.com
 
 </footer>
 
+<div id="modal" class="modal">
+
+<div class="modal-backdrop" onclick="closeModal()"></div>
+
+<div class="modal-content">
+
+<button class="close-btn" onclick="closeModal()">
+✕
+</button>
+
+<img id="modalImage" src="">
+
+</div>
+
+</div>
+
 <script>
 
-function toggleCase(id){
+function openModal(image){
 
-const studies =
-document.querySelectorAll('.case-study');
+document.getElementById('modalImage').src=image;
+document.getElementById('modal').classList.add('active');
+document.body.style.overflow='hidden';
 
-studies.forEach(item=>{
+}
 
-if(item.id !== id){
-item.classList.remove('active');
+function closeModal(){
+
+document.getElementById('modal').classList.remove('active');
+document.body.style.overflow='auto';
+
+}
+
+document.addEventListener('keydown',function(e){
+
+if(e.key==='Escape'){
+closeModal();
 }
 
 });
-
-document
-.getElementById(id)
-.classList
-.toggle('active');
-
-}
 
 </script>
 
