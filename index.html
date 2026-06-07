@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tutkun Ur | Sr. Product Designer</title>
+<title>Tutku Nur Yılmaz | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,150 +12,191 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0a0a0a;
-    color:white;
-    font-family:'Inter',sans-serif;
-    overflow-x:hidden;
+font-family:'Inter',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+.container{
+max-width:1400px;
+margin:auto;
+padding:0 32px;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:80px 24px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
 .hero-content{
-    max-width:900px;
+max-width:900px;
 }
 
 .hero h1{
-    font-size:72px;
-    font-weight:800;
-    line-height:1;
-    margin-bottom:24px;
+font-size:clamp(60px,10vw,120px);
+font-weight:800;
+letter-spacing:-4px;
+line-height:.95;
 }
 
 .hero h2{
-    font-size:24px;
-    color:#9ca3af;
-    font-weight:500;
-    margin-bottom:32px;
+margin-top:24px;
+font-size:clamp(20px,3vw,36px);
+font-weight:500;
+color:#9ca3af;
 }
 
 .hero p{
-    color:#d1d5db;
-    font-size:18px;
-    line-height:1.8;
-    max-width:700px;
-    margin:auto;
-}
-
-.tags{
-    margin-top:40px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    justify-content:center;
-}
-
-.tag{
-    border:1px solid rgba(255,255,255,.15);
-    padding:12px 20px;
-    border-radius:999px;
-    color:#d1d5db;
+margin-top:32px;
+font-size:20px;
+line-height:1.8;
+color:#a1a1aa;
 }
 
 .links{
-    margin-top:40px;
-    display:flex;
-    justify-content:center;
-    gap:16px;
-    flex-wrap:wrap;
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
 }
 
 .links a{
-    color:white;
-    text-decoration:none;
-    padding:14px 24px;
-    border-radius:12px;
-    background:#171717;
-    transition:.3s;
+text-decoration:none;
+color:white;
+padding:14px 24px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+border-radius:14px;
+transition:.3s;
 }
 
 .links a:hover{
-    background:#262626;
+transform:translateY(-4px);
+}
+
+.section{
+padding:120px 0;
 }
 
 .section-title{
-    text-align:center;
-    font-size:42px;
-    font-weight:800;
-    margin-bottom:20px;
+font-size:64px;
+font-weight:800;
+letter-spacing:-2px;
+margin-bottom:12px;
 }
 
 .section-subtitle{
-    text-align:center;
-    color:#9ca3af;
-    margin-bottom:80px;
+color:#9ca3af;
+margin-bottom:60px;
 }
 
 .project{
-    width:100%;
-    margin-bottom:120px;
+background:#0f0f10;
+border:1px solid rgba(255,255,255,.08);
+border-radius:28px;
+overflow:hidden;
+margin-bottom:32px;
+cursor:pointer;
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
 }
 
 .project img{
-    width:100%;
-    display:block;
+width:100%;
+display:block;
+}
+
+.project-info{
+padding:24px;
+}
+
+.project-info h3{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.project-info p{
+color:#9ca3af;
+}
+
+.case-study{
+display:none;
+margin-bottom:60px;
+background:#0a0a0a;
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:24px;
+}
+
+.case-study.active{
+display:block;
+}
+
+.case-study-meta{
+display:flex;
+gap:24px;
+flex-wrap:wrap;
+margin-bottom:24px;
+color:#9ca3af;
+}
+
+.case-study img{
+width:100%;
+display:block;
+border-radius:16px;
 }
 
 footer{
-    padding:100px 24px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.08);
+padding:120px 0;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
 }
 
 footer h3{
-    font-size:32px;
-    margin-bottom:20px;
+font-size:42px;
+margin-bottom:16px;
 }
 
 footer p{
-    color:#9ca3af;
-    margin-bottom:30px;
+color:#9ca3af;
+margin-bottom:20px;
 }
 
-.email{
-    color:white;
-    text-decoration:none;
-    font-size:20px;
+footer a{
+color:white;
+text-decoration:none;
 }
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:42px;
-}
-
-.hero h2{
-    font-size:18px;
+.container{
+padding:0 20px;
 }
 
 .section-title{
-    font-size:28px;
+font-size:42px;
+}
+
+.project-info h3{
+font-size:22px;
 }
 
 }
@@ -167,121 +208,213 @@ footer p{
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="container hero-content">
 
-        <h1>Tutkun Ur</h1>
+<h1>Tutku Nur Yılmaz</h1>
 
-        <h2>Senior Product Designer</h2>
+<h2>Sr. Marketing Designer / UI UX Designer</h2>
 
-        <p>
-            Product designer focused on e-commerce, mobile experiences,
-            design systems, growth initiatives and AI-powered workflows.
-            Creating scalable experiences that balance business goals,
-            usability and visual excellence.
-        </p>
+<p>
+Designing growth-focused digital products,
+e-commerce experiences and scalable systems.
+Creating experiences that balance business goals,
+usability and visual excellence.
+</p>
 
-        <div class="tags">
-            <div class="tag">Product Design</div>
-            <div class="tag">UX Strategy</div>
-            <div class="tag">Design Systems</div>
-            <div class="tag">AI Workflows</div>
-            <div class="tag">Mobile & Web</div>
-            <div class="tag">Growth Design</div>
-        </div>
+<div class="links">
 
-        <div class="links">
-            <a href="mailto:tutkunurk@gmail.com">Email</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Behance</a>
-        </div>
+<a href="https://www.linkedin.com/in/tutku-nur-kurtulu%C5%9F-240688140/" target="_blank">LinkedIn</a>
 
-    </div>
+<a href="https://www.behance.net/tutkunurk" target="_blank">Behance</a>
+
+<a href="mailto:tutkunurk@gmail.com">Email</a>
+
+</div>
+
+</div>
 
 </section>
 
-<section>
+<section class="section">
 
-    <h2 class="section-title">Selected Case Studies</h2>
-    <p class="section-subtitle">
-        End-to-end product design projects across web and mobile platforms.
-    </p>
+<div class="container">
 
-</section>
+<h2 class="section-title">Selected Work</h2>
 
+<p class="section-subtitle">
+Product design, growth and platform experiences.
+</p>
 <!-- COUPON -->
 
-<section class="project">
-    <img src="coupon-experience-redesign-cover.jpg" alt="">
-</section>
+<div class="project" onclick="toggleCase('coupon')">
 
-<section class="project">
-    <img src="ciceksepeti-kupon.jpg" alt="">
-</section>
+<img src="coupon-experience-redesign-cover.jpg">
+
+<div class="project-info">
+<h3>Coupon Experience Redesign</h3>
+<p>Mobile & Web Product Experience</p>
+</div>
+
+</div>
+
+<div id="coupon" class="case-study">
+
+<div class="case-study-meta">
+<span>Role: Sr. Product Designer</span>
+<span>Platform: Mobile & Web</span>
+<span>Year: 2024</span>
+</div>
+
+<img src="ciceksepeti-kupon.jpg">
+
+</div>
 
 <!-- ACCOUNT -->
 
-<section class="project">
-    <img src="account-center-redesign-cover.jpg" alt="">
-</section>
+<div class="project" onclick="toggleCase('account')">
 
-<section class="project">
-    <img src="ciceksepeti-hesabim.jpg" alt="">
-</section>
+<img src="account-center-redesign-cover.jpg">
+
+<div class="project-info">
+<h3>Account Center Redesign</h3>
+<p>Mobile Product Experience</p>
+</div>
+
+</div>
+
+<div id="account" class="case-study">
+
+<div class="case-study-meta">
+<span>Role: Sr. Product Designer</span>
+<span>Platform: Mobile</span>
+</div>
+
+<img src="ciceksepeti-hesabim.jpg">
+
+</div>
 
 <!-- THANK YOU -->
 
-<section class="project">
-    <img src="ciceksepeti-thank-you-redesign-cover.jpg" alt="">
-</section>
+<div class="project" onclick="toggleCase('thanks')">
 
-<section class="project">
-    <img src="ciceksepeti-tesekkurler.jpg" alt="">
-</section>
+<img src="ciceksepeti-thank-you-redesign-cover.jpg">
+
+<div class="project-info">
+<h3>Thank You Experience</h3>
+<p>Order Completion Experience</p>
+</div>
+
+</div>
+
+<div id="thanks" class="case-study">
+
+<img src="ciceksepeti-tesekkurler.jpg">
+
+</div>
 
 <!-- VIDEO CARD -->
 
-<section class="project">
-    <img src="ciceksepeti-video-card-cover.jpg" alt="">
-</section>
+<div class="project" onclick="toggleCase('video')">
 
-<section class="project">
-    <img src="ciceksepeti-video-kart.jpg" alt="">
-</section>
+<img src="ciceksepeti-video-card-cover.jpg">
+
+<div class="project-info">
+<h3>Video Card Experience</h3>
+<p>Gift Messaging Experience</p>
+</div>
+
+</div>
+
+<div id="video" class="case-study">
+
+<img src="ciceksepeti-video-kart.jpg">
+
+</div>
 
 <!-- ABOUT US -->
 
-<section class="project">
-    <img src="ciceksepeti-about-us-cover.jpg" alt="">
-</section>
+<div class="project" onclick="toggleCase('about')">
 
-<section class="project">
-    <img src="ciceksepeti-hakkimizda.jpg" alt="">
-</section>
+<img src="ciceksepeti-about-us-cover.jpg">
+
+<div class="project-info">
+<h3>About Us Redesign</h3>
+<p>Corporate Experience</p>
+</div>
+
+</div>
+
+<div id="about" class="case-study">
+
+<img src="ciceksepeti-hakkimizda.jpg">
+
+</div>
 
 <!-- B2B -->
 
-<section class="project">
-    <img src="b2b-customer-platform-cover.jpg" alt="">
-</section>
+<div class="project" onclick="toggleCase('b2b')">
 
-<section class="project">
-    <img src="nota-cicek-b2b.jpg" alt="">
-</section>
+<img src="b2b-customer-platform-cover.jpg">
 
+<div class="project-info">
+<h3>B2B Customer Platform</h3>
+<p>Corporate Ordering Experience</p>
+</div>
+
+</div>
+
+<div id="b2b" class="case-study">
+
+<img src="nota-cicek-b2b.jpg">
+
+</div>
+
+</div>
+</section>
 <footer>
 
-    <h3>Let's Build Better Products</h3>
+<div class="container">
 
-    <p>
-        Available for Senior Product Design, Lead Product Design
-        and Product Strategy opportunities.
-    </p>
+<h3>Let's Build Better Products</h3>
 
-    <a class="email" href="mailto:tutkunurk@gmail.com">
-        tutkunurk@gmail.com
-    </a>
+<p>
+Available for Product Design, Marketing Design,
+Growth Design and UI/UX opportunities.
+</p>
+
+<p style="margin-top:20px;">
+<a href="mailto:tutkunurk@gmail.com">
+tutkunurk@gmail.com
+</a>
+</p>
+
+</div>
 
 </footer>
+
+<script>
+
+function toggleCase(id){
+
+const studies =
+document.querySelectorAll('.case-study');
+
+studies.forEach(item=>{
+
+if(item.id !== id){
+item.classList.remove('active');
+}
+
+});
+
+document
+.getElementById(id)
+.classList
+.toggle('active');
+
+}
+
+</script>
 
 </body>
 </html>
